@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		186C57ED15F69CF700C52AA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186C57EC15F69CF700C52AA6 /* UIKit.framework */; };
+		186C57EF15F69CF700C52AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186C57EE15F69CF700C52AA6 /* Foundation.framework */; };
+		186C57F115F69CF700C52AA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186C57F015F69CF700C52AA6 /* CoreGraphics.framework */; };
+		186C57F715F69CF700C52AA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 186C57F515F69CF700C52AA6 /* InfoPlist.strings */; };
+		186C57F915F69CF700C52AA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 186C57F815F69CF700C52AA6 /* main.m */; };
+		186C57FD15F69CF700C52AA6 /* BWTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186C57FC15F69CF700C52AA6 /* BWTAppDelegate.m */; };
+		186C580015F69CF700C52AA6 /* BWTFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186C57FF15F69CF700C52AA6 /* BWTFirstViewController.m */; };
+		186C580215F69CF700C52AA6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 186C580115F69CF700C52AA6 /* first.png */; };
+		186C580415F69CF700C52AA6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186C580315F69CF700C52AA6 /* first@2x.png */; };
+		186C580715F69CF700C52AA6 /* BWTSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186C580615F69CF700C52AA6 /* BWTSecondViewController.m */; };
+		186C580915F69CF700C52AA6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 186C580815F69CF700C52AA6 /* second.png */; };
+		186C580B15F69CF700C52AA6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186C580A15F69CF700C52AA6 /* second@2x.png */; };
+		186C580E15F69CF700C52AA6 /* BWTFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C580C15F69CF700C52AA6 /* BWTFirstViewController.xib */; };
+		186C581115F69CF700C52AA6 /* BWTSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C580F15F69CF700C52AA6 /* BWTSecondViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		186C57E815F69CF700C52AA6 /* BandwidthTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BandwidthTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		186C57EC15F69CF700C52AA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		186C57EE15F69CF700C52AA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		186C57F015F69CF700C52AA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		186C57F415F69CF700C52AA6 /* BandwidthTest2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BandwidthTest2-Info.plist"; sourceTree = "<group>"; };
+		186C57F615F69CF700C52AA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		186C57F815F69CF700C52AA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		186C57FA15F69CF700C52AA6 /* BandwidthTest2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BandwidthTest2-Prefix.pch"; sourceTree = "<group>"; };
+		186C57FB15F69CF700C52AA6 /* BWTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTAppDelegate.h; sourceTree = "<group>"; };
+		186C57FC15F69CF700C52AA6 /* BWTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTAppDelegate.m; sourceTree = "<group>"; };
+		186C57FE15F69CF700C52AA6 /* BWTFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTFirstViewController.h; sourceTree = "<group>"; };
+		186C57FF15F69CF700C52AA6 /* BWTFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTFirstViewController.m; sourceTree = "<group>"; };
+		186C580115F69CF700C52AA6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		186C580315F69CF700C52AA6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		186C580515F69CF700C52AA6 /* BWTSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWTSecondViewController.h; sourceTree = "<group>"; };
+		186C580615F69CF700C52AA6 /* BWTSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWTSecondViewController.m; sourceTree = "<group>"; };
+		186C580815F69CF700C52AA6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		186C580A15F69CF700C52AA6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		186C580D15F69CF700C52AA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BWTFirstViewController.xib; sourceTree = "<group>"; };
+		186C581015F69CF700C52AA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BWTSecondViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		186C57E515F69CF700C52AA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				186C57ED15F69CF700C52AA6 /* UIKit.framework in Frameworks */,
+				186C57EF15F69CF700C52AA6 /* Foundation.framework in Frameworks */,
+				186C57F115F69CF700C52AA6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		186C57DD15F69CF700C52AA6 = {
+			isa = PBXGroup;
+			children = (
+				186C57F215F69CF700C52AA6 /* BandwidthTest2 */,
+				186C57EB15F69CF700C52AA6 /* Frameworks */,
+				186C57E915F69CF700C52AA6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		186C57E915F69CF700C52AA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				186C57E815F69CF700C52AA6 /* BandwidthTest2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		186C57EB15F69CF700C52AA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				186C57EC15F69CF700C52AA6 /* UIKit.framework */,
+				186C57EE15F69CF700C52AA6 /* Foundation.framework */,
+				186C57F015F69CF700C52AA6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		186C57F215F69CF700C52AA6 /* BandwidthTest2 */ = {
+			isa = PBXGroup;
+			children = (
+				186C57FB15F69CF700C52AA6 /* BWTAppDelegate.h */,
+				186C57FC15F69CF700C52AA6 /* BWTAppDelegate.m */,
+				186C57FE15F69CF700C52AA6 /* BWTFirstViewController.h */,
+				186C57FF15F69CF700C52AA6 /* BWTFirstViewController.m */,
+				186C580115F69CF700C52AA6 /* first.png */,
+				186C580315F69CF700C52AA6 /* first@2x.png */,
+				186C580515F69CF700C52AA6 /* BWTSecondViewController.h */,
+				186C580615F69CF700C52AA6 /* BWTSecondViewController.m */,
+				186C580815F69CF700C52AA6 /* second.png */,
+				186C580A15F69CF700C52AA6 /* second@2x.png */,
+				186C580C15F69CF700C52AA6 /* BWTFirstViewController.xib */,
+				186C580F15F69CF700C52AA6 /* BWTSecondViewController.xib */,
+				186C57F315F69CF700C52AA6 /* Supporting Files */,
+			);
+			path = BandwidthTest2;
+			sourceTree = "<group>";
+		};
+		186C57F315F69CF700C52AA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				186C57F415F69CF700C52AA6 /* BandwidthTest2-Info.plist */,
+				186C57F515F69CF700C52AA6 /* InfoPlist.strings */,
+				186C57F815F69CF700C52AA6 /* main.m */,
+				186C57FA15F69CF700C52AA6 /* BandwidthTest2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		186C57E715F69CF700C52AA6 /* BandwidthTest2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 186C581415F69CF700C52AA6 /* Build configuration list for PBXNativeTarget "BandwidthTest2" */;
+			buildPhases = (
+				186C57E415F69CF700C52AA6 /* Sources */,
+				186C57E515F69CF700C52AA6 /* Frameworks */,
+				186C57E615F69CF700C52AA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BandwidthTest2;
+			productName = BandwidthTest2;
+			productReference = 186C57E815F69CF700C52AA6 /* BandwidthTest2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		186C57DF15F69CF700C52AA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BWT;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Richard Steinberger";
+			};
+			buildConfigurationList = 186C57E215F69CF700C52AA6 /* Build configuration list for PBXProject "BandwidthTest2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 186C57DD15F69CF700C52AA6;
+			productRefGroup = 186C57E915F69CF700C52AA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				186C57E715F69CF700C52AA6 /* BandwidthTest2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		186C57E615F69CF700C52AA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				186C57F715F69CF700C52AA6 /* InfoPlist.strings in Resources */,
+				186C580215F69CF700C52AA6 /* first.png in Resources */,
+				186C580415F69CF700C52AA6 /* first@2x.png in Resources */,
+				186C580915F69CF700C52AA6 /* second.png in Resources */,
+				186C580B15F69CF700C52AA6 /* second@2x.png in Resources */,
+				186C580E15F69CF700C52AA6 /* BWTFirstViewController.xib in Resources */,
+				186C581115F69CF700C52AA6 /* BWTSecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		186C57E415F69CF700C52AA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				186C57F915F69CF700C52AA6 /* main.m in Sources */,
+				186C57FD15F69CF700C52AA6 /* BWTAppDelegate.m in Sources */,
+				186C580015F69CF700C52AA6 /* BWTFirstViewController.m in Sources */,
+				186C580715F69CF700C52AA6 /* BWTSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		186C57F515F69CF700C52AA6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				186C57F615F69CF700C52AA6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		186C580C15F69CF700C52AA6 /* BWTFirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				186C580D15F69CF700C52AA6 /* en */,
+			);
+			name = BWTFirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		186C580F15F69CF700C52AA6 /* BWTSecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				186C581015F69CF700C52AA6 /* en */,
+			);
+			name = BWTSecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		186C581215F69CF700C52AA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		186C581315F69CF700C52AA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		186C581515F69CF700C52AA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BandwidthTest2/BandwidthTest2-Prefix.pch";
+				INFOPLIST_FILE = "BandwidthTest2/BandwidthTest2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		186C581615F69CF700C52AA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BandwidthTest2/BandwidthTest2-Prefix.pch";
+				INFOPLIST_FILE = "BandwidthTest2/BandwidthTest2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		186C57E215F69CF700C52AA6 /* Build configuration list for PBXProject "BandwidthTest2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				186C581215F69CF700C52AA6 /* Debug */,
+				186C581315F69CF700C52AA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		186C581415F69CF700C52AA6 /* Build configuration list for PBXNativeTarget "BandwidthTest2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				186C581515F69CF700C52AA6 /* Debug */,
+				186C581615F69CF700C52AA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 186C57DF15F69CF700C52AA6 /* Project object */;
+}
