@@ -1,0 +1,70 @@
+From ThirdViewController.m, 9/8/2012:
+
+// Start Downloads
+// For each URL with a switch in the ON position, do the download and report bandwidth
+- (IBAction)startBandwidthTestButton:(id)sender {
+
+    // Get text for URL 1, 2 and 3.  
+    NSArray *URLs = [NSArray arrayWithObjects:self.URL1Text.text, self.URL2Text.text, self.URL3Text.text, nil];
+        
+    // For each URL with the switch set to ON, do the download and report the bandwidth.
+    
+    int iurl = 0;
+    // iurl is the actual URL Button index, starts at 0.
+    NSArray *URLSwitches = @[URL1Button, URL2Button, URL3Button];
+    for (UISwitch *uis in URLSwitches) {
+        if (uis.isOn) {
+            //MyLog(@"Switch %i is ON", iurl + 1);
+            NSString *URLString = [URLs objectAtIndex:iurl];
+            //MyLog(@"URL %i = %@", iurl + 1, URLString);
+            
+            NSURL *url = [NSURL URLWithString:URLString];
+            NSURLRequest *req = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:DOWNLOAD_TIMEOUT];
+            NSOperationQueue *queue = [NSOperationQueue mainQueue];
+
+            switch (iurl) {
+                case 0: {
+                    [self.activity1 startAnimating];
+                    self.startTime1 = [NSDate date];
+                    [NSURLConnection sendAsynchronousRequest:req queue:queue completionHandler:
+                     ^(NSURLResponse *response, NSData *data, NSError *error) {
+                         [self.activity1 stopAnimating];
+                         NSUInteger bytesReceived = [data length];
+                         NSString *bwString;
+                         if (bytesReceived > 0 && error == nil) {
+                             // Success, got data, calculate BW
+                             NSTimeInterval et = -[self.startTime1 timeIntervalSinceNow];
+                             bwString = [self bandwidthString:bytesReceived:et];
+                             MyLog(@"%@: Bytes downloaded: %u, ET = %f secs, BW = %@", URLString, bytesReceived, et, bwString);
+                                                          
+                         }
+                         else if (bytesReceived == 0 && error == nil) {
+                             // Nothing downloaded
+                         }
+                         else if (error != nil) {
+                             
+                         }
+                         self.bandwidth1Text.text = bwString;
+                     }];
+                    break;
+                }
+                case 1: {
+                    
+                    break;
+                }
+                    
+                case 2: {
+                    
+                    break;
+                }
+                    
+                default: {
+                    MyLog(@"startBandwidthTestButton: Should never get here.");
+                    break;
+                }
+                    
+            }
+            iurl++;
+        }
+    }
+}
