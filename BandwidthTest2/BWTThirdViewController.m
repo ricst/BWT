@@ -129,7 +129,7 @@
         for (myd in self.downloads) {
             [myd.connection cancel];
             // Cancel all existing "connectionFinished" Notifications.  We will reestablsih these
-            [[NSNotificationCenter defaultCenter] removeObserver:self name:@"connectionFinished" object:myd];
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:CONNECTION_FINISHED object:myd];
         }
     }
             
@@ -186,7 +186,7 @@
         UITextField *tf = [self.bandwidthText objectAtIndex:downloadID];
         tf.text = bwString;
     }
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"connectionFinished" object:d];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:CONNECTION_FINISHED object:d];
     [self.downloads removeObject:d];
 }
 
