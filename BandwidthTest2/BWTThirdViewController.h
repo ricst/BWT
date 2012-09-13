@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+// Number of BW measurements we can take
+#define MAX_BW_OBJECTS 3
+
 @interface BWTThirdViewController : UIViewController
+
+// Array containers for some of the objects below
+@property (nonatomic, strong) NSMutableArray *startTime;
+@property (nonatomic, strong) NSArray *URLText;
+@property (nonatomic, strong) NSArray *activity;
+@property (nonatomic, strong) NSArray *bandwidthText;
+@property (nonatomic, strong) NSArray *URLButtons;
 
 // Data properties
 

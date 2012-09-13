@@ -26,6 +26,12 @@
 
 @implementation BWTThirdViewController
 
+@synthesize startTime = _startTime;
+@synthesize URLText = _URLText;
+@synthesize activity = _activity;
+@synthesize bandwidthText = _bandwidthText;
+@synthesize URLButtons = _URLButtons;
+
 @synthesize startTime1 = _startTime1;
 @synthesize startTime2 = _startTime2;
 @synthesize startTime3 = _startTime3;
@@ -64,6 +70,19 @@
     self.URL1Text.text = URL1;
     self.URL2Text.text = URL2;
     self.URL3Text.text = URL3;
+    
+    // initialize some arrays
+    
+    self.startTime = [NSMutableArray array];
+    // Pad to initially create dummy objects, to be replaced during multi BW tests
+    for (int i = 0; i < MAX_BW_OBJECTS; i++) {
+        [self.startTime addObject:[NSNull null]];
+    }
+    
+    self.URLText = [NSArray arrayWithObjects:self.URL1Text, self.URL2Text, self.URL3Text, nil];
+    self.activity = [NSArray arrayWithObjects:self.activity1, self.activity2, self.activity3, nil];
+    self.bandwidthText = [NSArray arrayWithObjects:self.bandwidth1Text, self.bandwidth2Text, self.bandwidth3Text, nil];
+    self.URLButtons = [NSArray arrayWithObjects:self.URL1Button, self.URL2Button, self.URL3Button, nil];
 }
 
 - (void)viewDidUnload
@@ -99,9 +118,6 @@
 // For each URL with a switch in the ON position, do the download and report bandwidth
 - (IBAction)startBandwidthTestButton:(id)sender {
 
-    // Get text for URL 1, 2 and 3.  
-    NSArray *URLs = [NSArray arrayWithObjects:self.URL1Text.text, self.URL2Text.text, self.URL3Text.text, nil];
-    
     if (!self.downloads) {
         self.downloads = [NSMutableArray array];
     }
@@ -119,13 +135,14 @@
             
     // For each URL with the switch set to ON, do the download and report the bandwidth.
     
-    NSInteger iurl = 0;
+    NSUInteger iurl = 0;
     // iurl is the actual URL Button index; starts at 0.
-    NSArray *URLSwitches = @[URL1Button, URL2Button, URL3Button];
-    for (UISwitch *uis in URLSwitches) {
+    for (UISwitch *uis in self.URLButtons) {
         if (uis.isOn) {
             //MyLog(@"Switch %i is ON", iurl + 1);
-            NSString *URLString = [URLs objectAtIndex:iurl];
+            //NSString *URLString = [URLs objectAtIndex:iurl];
+            UITextField *tf = [self.URLText objectAtIndex:iurl];
+            NSString *URLString = tf.text;
             MyLog(@"URL %i = %@", iurl + 1, URLString);
             
             NSURL *url = [NSURL URLWithString:URLString];
@@ -134,20 +151,10 @@
             [self.downloads addObject:dload];
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finished:) name:CONNECTION_FINISHED object:dload];
             
-            if (iurl == 0) {
-                [self.activity1 startAnimating];
-                self.startTime1 = [NSDate date];
-                [dload.connection start];
-            }
-            else if (iurl == 1) {
-                
-            }
-            else if (iurl == 2) {
-                
-            }
-            else {
-                MyLog(@"startBandwidthTest: should not reach here");
-            }
+            [[self.activity objectAtIndex:iurl] startAnimating];
+            NSDate *startTime = [NSDate date];
+            [self.startTime replaceObjectAtIndex:iurl withObject:startTime];
+            [dload.connection start];
         }
         
         iurl++;  // increment URL counter, which starts at 0
@@ -172,25 +179,12 @@
         NSTimeInterval et;
         NSString *bwString;
         
-        //MyLog(@"DownloadID = %i", downloadID);
-        
-        // Separate case for each URL, activity indicator and timer.
-        if (downloadID == 0) {
-            [self.activity1 stopAnimating];
-            et = -[self.startTime1 timeIntervalSinceNow];
-            bwString = [self bandwidthString:length elapsedTime:et];
-            self.bandwidth1Text.text = bwString;
-        }
-        else if (downloadID == 1) {
-            
-        }
-        else if (downloadID == 2) {
-            
-        }
-        else {
-            MyLog(@"finished: Should never have this download ID: %u", downloadID);
-        }
+        [[self.activity objectAtIndex:downloadID] stopAnimating];
         // Get count of bytes received and ET and then display BW
+        et = -[[self.startTime objectAtIndex:downloadID] timeIntervalSinceNow];
+        bwString = [self bandwidthString:length elapsedTime:et];
+        UITextField *tf = [self.bandwidthText objectAtIndex:downloadID];
+        tf.text = bwString;
     }
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"connectionFinished" object:d];
     [self.downloads removeObject:d];
@@ -212,7 +206,7 @@
         }
     }
     else {
-        bwString = @"ET 0 err";
+        bwString = @"ET = 0 error";
     }
 
     return bwString;
