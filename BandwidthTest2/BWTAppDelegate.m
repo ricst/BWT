@@ -11,6 +11,7 @@
 #import "BWTFirstViewController.h"
 #import "BWTSecondViewController.h"
 #import "BWTThirdViewController.h"
+#import "URLDefaults.h"
 
 @implementation BWTAppDelegate
 
@@ -18,6 +19,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // Some default defaults for multi-bandwidth test
+    [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:INITIAL_WEBSITE, @"INITIAL_WEBSITE", URL1, @"URL1", URL2, @"URL2", URL3, @"URL3", nil]];
 
     UIViewController *viewController1 = [[BWTFirstViewController alloc] initWithNibName:@"BWTFirstViewController" bundle:nil];
     UIViewController *viewController2 = [[BWTSecondViewController alloc] initWithNibName:@"BWTSecondViewController" bundle:nil];

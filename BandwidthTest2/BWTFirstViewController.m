@@ -13,7 +13,6 @@
 
 // Maybe allow user to adjust
 #define DOWNLOAD_TIMEOUT 15.0f
-#define INITIAL_WEBSITE @"http://www.apple.com"
 
 @interface BWTFirstViewController ()
 
@@ -51,7 +50,8 @@
     self.myWebView.delegate = self;
     
     // Start with an initial web page loaded
-    NSURL *url = [NSURL URLWithString:INITIAL_WEBSITE];
+    NSString *initialURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"INITIAL_WEBSITE"];
+    NSURL *url = [NSURL URLWithString:initialURL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.myWebView loadRequest:request];
     
@@ -74,9 +74,11 @@
     // Release any retained subviews of the main view.
 }
 
+// Portrait only, for now
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    //return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 // Text field for URL entry
@@ -155,7 +157,7 @@
             bwString = [NSString stringWithFormat:@"%5.2f Mb/s", bandwidth/1000000.0];
         }
     } else {
-        bwString = @"Error";
+        bwString = @"et Error";
     }
     self.downloadRate.text = bwString;
     

@@ -8,17 +8,12 @@
 
 #import "BWTThirdViewController.h"
 #import "MyDownloader.h"
+#import "URLDefaults.h"
 
 // 0 => enable debug logging. 1=> Disable debug logging
 #define MyLog if(0); else NSLog
 
-#define TOTAL_URLS 3
-
-// Some initial defaults that may later go into NSUserDefaults
 #define DOWNLOAD_TIMEOUT 15.0f
-#define URL1 @"http://www.youtube.com"
-#define URL2 @"http://www.wikipedia.org"
-#define URL3 @"http://www.ebay.com"
 
 #define SEGMENT_INDEX_BITS 0
 
@@ -69,10 +64,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    // set initial URLs.  Maybe get from NSUserDefaults eventually
-    self.URL1Text.text = URL1;
-    self.URL2Text.text = URL2;
-    self.URL3Text.text = URL3;
+    // set initial URLs.
+    self.URL1Text.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"URL1"];
+    self.URL2Text.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"URL2"];
+    self.URL3Text.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"URL3"];
     
     // initialize some arrays
     
@@ -110,6 +105,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
@@ -240,20 +236,34 @@
     return bwString;
 }
 
-// Set URLs to some default values
+// Reset URLs to original App defaults, clearing out any user set defaults
 - (IBAction)resetDefaultsButton:(id)sender {
     
+    [NSUserDefaults resetStandardUserDefaults];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:INITIAL_WEBSITE, @"INITIAL_WEBSITE", URL1, @"URL1", URL2, @"URL2", URL3, @"URL3", nil]];
+    self.URL1Text.text = URL1;
+    self.URL2Text.text = URL2;
+    self.URL3Text.text = URL3;
 }
 
 // Actions when user finishes entering text
-
+// Save new URL into NSUserDefaults
 - (IBAction)URL1TextAction:(id)sender {
+    
+    NSString *urlString = self.URL1Text.text;
+    [[NSUserDefaults standardUserDefaults] setObject:urlString forKey:@"URL1"];
 }
 
 - (IBAction)URL2TextAction:(id)sender {
+    
+    NSString *urlString = self.URL2Text.text;
+    [[NSUserDefaults standardUserDefaults] setObject:urlString forKey:@"URL2"];
 }
 
 - (IBAction)URL3TextAction:(id)sender {
+    
+    NSString *urlString = self.URL3Text.text;
+    [[NSUserDefaults standardUserDefaults] setObject:urlString forKey:@"URL3"];
 }
 
 // Prepend "http://" if string does not start with "http"

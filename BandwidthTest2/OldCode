@@ -1,3 +1,13 @@
+
+The BWT App provides a simple way to measure real world bandwidth based on 1 or up to 3 downloads of user selected files.  
+
+In the first view is accessible by pressing the "Single" button on the tab bar.  This is the starting view.  You may enter/edit any URL you choose in the upper text field and the mini-browser below it will display the content.  You may also use the mini-browser to navigate to other pages.  
+
+Once you are on a page you like, tap "Start Bandwidth Test" to get a bandwidth measurement for the displayed URL.  
+
+To test for 1 - 3 URLs, click on the 
+
+==============================
 From ThirdViewController.m, 9/8/2012:
 
 // Start Downloads
