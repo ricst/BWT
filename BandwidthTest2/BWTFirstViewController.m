@@ -144,14 +144,15 @@
     NSString *bwString;
     if (et > 0.0) {
         double bandwidth = bytesReceived/et;
+        bandwidth = bandwidth * 8.0; // convert to bits/sec
         if (bandwidth < 1000.0) {
-            bwString = [NSString stringWithFormat:@"%f B/sec", bandwidth];
+            bwString = [NSString stringWithFormat:@"%f Bits/sec", bandwidth];
         }
         else if (bandwidth < 1000000.0) {
-            bwString = [NSString stringWithFormat:@"%6.1f KB/s", bandwidth/1000.0];
+            bwString = [NSString stringWithFormat:@"%6.1f Kb/s", bandwidth/1000.0];
         }
         else {
-            bwString = [NSString stringWithFormat:@"%5.2f MB/s", bandwidth/1000000.0];
+            bwString = [NSString stringWithFormat:@"%5.2f Mb/s", bandwidth/1000000.0];
         }
     } else {
         bwString = @"Error";

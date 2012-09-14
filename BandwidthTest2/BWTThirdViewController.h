@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-// Number of BW measurements we can take
+// Total number of BW measurements we can perform
 #define MAX_BW_OBJECTS 3
 
 @interface BWTThirdViewController : UIViewController
@@ -28,7 +28,6 @@
 @property (nonatomic, strong) NSMutableArray *downloads;
 
 // Outlets
-// Would have been better to use Outlet Collections (maybe version 2): See http://bit.ly/QceExB
 // URL Text Fields
 @property (weak, nonatomic) IBOutlet UITextField *URL1Text;
 @property (weak, nonatomic) IBOutlet UITextField *URL2Text;
@@ -53,6 +52,9 @@
 @property (weak, nonatomic) IBOutlet UISwitch *URL1Button;
 @property (weak, nonatomic) IBOutlet UISwitch *URL2Button;
 @property (weak, nonatomic) IBOutlet UISwitch *URL3Button;
+
+// Segmented Control
+@property (weak, nonatomic) IBOutlet UISegmentedControl *bitsBytesControl;
 
 // Button Actions
 - (IBAction)startBandwidthTestButton:(id)sender;

@@ -20,6 +20,8 @@
 #define URL2 @"http://www.wikipedia.org"
 #define URL3 @"http://www.ebay.com"
 
+#define SEGMENT_INDEX_BITS 0
+
 @interface BWTThirdViewController ()
 
 @end
@@ -49,6 +51,7 @@
 @synthesize URL1Button;
 @synthesize URL2Button;
 @synthesize URL3Button;
+@synthesize bitsBytesControl;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -99,6 +102,7 @@
     [self setActivity1:nil];
     [self setActivity2:nil];
     [self setActivity3:nil];
+    [self setBitsBytesControl:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -143,6 +147,7 @@
             //NSString *URLString = [URLs objectAtIndex:iurl];
             UITextField *tf = [self.URLText objectAtIndex:iurl];
             NSString *URLString = tf.text;
+            URLString = [self formatStringWithHttp:URLString];  // prepend http:// if user omitted
             MyLog(@"URL %i = %@", iurl + 1, URLString);
             
             NSURL *url = [NSURL URLWithString:URLString];
@@ -164,12 +169,12 @@
 // Notification received that download has finished.  Check for error.
 // If OK, stop appropriate activity indicator and display bandwidth
 // Finally, cancel notification and remove object from download array
-- (void)finished: (NSNotification *)note {
-    MyDownloader *d = [note object];
+- (void)finished: (NSNotification *)notify {
+    MyDownloader *d = [notify object];
     NSData *data = nil;
-    if ([note userInfo]) {
+    if ([notify userInfo]) {
         // Some kind of error happened
-        MyLog(@"finished: Error detected: %@", [[[note userInfo] objectForKey:@"error"] localizedDescription]);
+        MyLog(@"finished: Error detected: %@", [[[notify userInfo] objectForKey:@"error"] localizedDescription]);
     }
     else {
         //MyLog(@"finished: reached with data");
@@ -193,16 +198,39 @@
 - (NSString *)bandwidthString: (NSUInteger)bytes elapsedTime:(NSTimeInterval)et {
     
     NSString *bwString;
+    BOOL bits;
+    
+    // See whether user has selected bits/sec or Bytes/sec output display
+    if (self.bitsBytesControl.selectedSegmentIndex == SEGMENT_INDEX_BITS) {
+        bits = YES;
+    }
+    else {
+        bits = NO;
+    }
+    
     if (et > 0.0) {
         double bandwidth = bytes/et;
+        if (bits) {
+            bandwidth = bandwidth * 8.0; // BW is bits/sec
+        }
+        
         if (bandwidth < 1000.0) {
-            bwString = [NSString stringWithFormat:@"%f B/sec", bandwidth];
+            if (bits)
+                bwString = [NSString stringWithFormat:@"%f b/sec", bandwidth];
+            else
+                bwString = [NSString stringWithFormat:@"%f B/sec", bandwidth];
         }
         else if (bandwidth < 1000000.0) {
-            bwString = [NSString stringWithFormat:@"%6.1f KB/s", bandwidth/1000.0];
+            if (bits)
+                bwString = [NSString stringWithFormat:@"%6.1f Kb/sec", bandwidth/1000.0];
+            else
+                bwString = [NSString stringWithFormat:@"%6.1f KB/sec", bandwidth/1000.0];
         }
         else {
-            bwString = [NSString stringWithFormat:@"%5.2f MB/s", bandwidth/1000000.0];
+            if (bits)
+                bwString = [NSString stringWithFormat:@"%5.2f Mb/sec", bandwidth/1000000.0];
+            else
+                bwString = [NSString stringWithFormat:@"%5.2f MB/sec", bandwidth/1000000.0];
         }
     }
     else {
@@ -212,10 +240,13 @@
     return bwString;
 }
 
+// Set URLs to some default values
 - (IBAction)resetDefaultsButton:(id)sender {
+    
 }
 
 // Actions when user finishes entering text
+
 - (IBAction)URL1TextAction:(id)sender {
 }
 
@@ -224,4 +255,15 @@
 
 - (IBAction)URL3TextAction:(id)sender {
 }
+
+// Prepend "http://" if string does not start with "http"
+// This allows https to remain unaltered, but adds http:// if user left off
+- (NSString *)formatStringWithHttp:(NSString *)urlText {
+    
+    if (![urlText hasPrefix:@"http"]) {
+        urlText = [@"http://" stringByAppendingString:urlText];
+    }
+    return urlText;
+}
+
 @end

@@ -24,6 +24,7 @@
     UIViewController *viewController3 = [[BWTThirdViewController alloc] initWithNibName:@"BWTThirdViewController" bundle:nil];
     
     self.tabBarController = [[UITabBarController alloc] init];
+    // Loading order = 1, 3, 2
     self.tabBarController.viewControllers = @[viewController1, viewController3, viewController2];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
