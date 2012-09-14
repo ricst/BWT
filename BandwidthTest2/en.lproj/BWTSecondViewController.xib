@@ -42,7 +42,7 @@
 						<string key="NSFrameSize">{320, 51}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="412891741"/>
+						<reference key="NSNextKeyView" ref="638469606"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC45OTMyNTc2NzA0IDEgMC43OTAxMjM0NTY4AA</bytes>
@@ -72,7 +72,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUITextView" id="412891741">
+					<object class="IBUITextView" id="638469606">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 50}, {320, 371}}</string>
@@ -110,16 +110,19 @@ IGJlZ2luIChvciByZXBlYXQpICB0aGUgbWVhc3VyZW1lbnRzLiAgQ2xpY2sgdGhlIHJlZCAiRGVmYXVs
 dHMiIGJ1dHRvbiB0byByZXN0b3JlIHRoZSBBcHAncyBzeXN0ZW0gZGVmYXVsdHMuICBVUkxzIHRoYXQg
 eW91IGVudGVyIGFyZSBhdXRvbWF0aWNhbGx5IHNhdmVkIGFuZCByZXN0b3JlZCBuZXh0IHRpbWUgeW91
 IHJ1biB0aGUgQXBwIChidXQgdGFwcGluZyAiRGVmYXVsdHMiIHJlc2V0cyB0byBzeXN0ZW0gZGVmYXVs
-dHMpLgoKTm90ZSB0aGF0IG9ubHkgdGhlIGRpc3BsYXllZCBVUkxzIGFyZSBkb3dubG9hZGVkLiAgTm8g
-ZW1iZWRkZWQgaW1hZ2VzIChvZnRlbiBmcm9tIG90aGVyIHNpdGVzKSBvciBvdGhlciBsaW5rZWQgY29u
-dGVudCBpcyBkb3dubG9hZGVkLiAgIFNvIGl0J3MgcHJlZmVyYWJsZSB0byBzZWxlY3QgVVJMcyB0aGF0
-IHJlZmVyIHRvIG1lZGl1bSB0byBsYXJnZSBhbW91bnRzIG9mIGRhdGEgaW4gb3JkZXIgdG8gZ2V0IHRo
-ZSBtb3N0IGFjY3VyYXRlIHJlc3VsdHMuCgpUZWNobmljYWwgbm90ZTogSWYgYSBVUkwgdGhhdCByZWZl
-cnMgdG8gYSBub24tZXhpc3RhbnQgb3Igbm9uLWF2YWlsYWJsZSBwYWdlIGlzIGVudGVyZWQsIGFuZCBh
-IGJhbmR3aWR0aG1lYXN1cmVtZW50IGlzIGF0dGVtcHRlZCwgYSByZXN1bHQgbWF5IGJlIGRpc3BsYXll
-ZC4gIElmIHRoaXMgaGFwcGVucywgdGhlIGxpa2VseSBjYXVzZSBpcyB0aGF0IHRoZSBpRGV2aWNlJ3Mg
-RE5TIHNlcnZlciBoYXMgcHJvdmlkZWQgYW4gZXJyb3IgcGFnZSwgYW5kIHRoZSBtZWFzdXJlbWVudCBp
-cyBiYXNlZCBvbiB0aGUgZG93bmxvYWQgb2YgdGhhdCBwYWdlLg</bytes>
+dHMpLgoKT25seSB0aGUgZGlzcGxheWVkIFVSTHMgYXJlIGRvd25sb2FkZWQuICBObyBlbWJlZGRlZCBp
+bWFnZXMgKG9mdGVuIGZyb20gb3RoZXIgc2l0ZXMpIG9yIG90aGVyIGxpbmtlZCBjb250ZW50IGlzIGRv
+d25sb2FkZWQuICAgU28gaXQncyBwcmVmZXJhYmxlIHRvIHNlbGVjdCBVUkxzIHRoYXQgcmVmZXIgdG8g
+bWVkaXVtIHRvIGxhcmdlIGFtb3VudHMgb2YgZGF0YSBpbiBvcmRlciB0byBnZXQgdGhlIG1vc3QgYWNj
+dXJhdGUgcmVzdWx0cy4gIE9ubHkgSFRUUCBhbmQgSFRUUFMgYXJlIHN1cHBvcnRlZC4gIElmIGEgVVJM
+IGlzIGVudGVyZWQgd2l0aG91dCBhIGxlYWRpbmcgImh0dHA6Ly8iLCB0aGVuIHRoaXMgaXMgcHJlcGVu
+ZGVkIHRvIHRoZSBVUkwgaW50ZXJuYWxseSBiZWZvcmUgdGhlIGRvd25sb2FkIHJlcXVlc3QgaXMgaXNz
+dWVkLgoKVGVjaG5pY2FsIG5vdGVzOiBJZiBhIFVSTCB0aGF0IHJlZmVycyB0byBhIG5vbi1leGlzdGFu
+dCBvciBub24tYXZhaWxhYmxlIHBhZ2UgaXMgZW50ZXJlZCwgYW5kIGEgYmFuZHdpZHRobWVhc3VyZW1l
+bnQgaXMgYXR0ZW1wdGVkLCBhIHJlc3VsdCBtYXkgYmUgZGlzcGxheWVkLiAgSWYgdGhpcyBoYXBwZW5z
+LCB0aGUgbGlrZWx5IGNhdXNlIGlzIHRoYXQgdGhlIGlEZXZpY2UncyBETlMgc2VydmVyIGhhcyBwcm92
+aWRlZCBhbiBlcnJvciBwYWdlLCBhbmQgdGhlIG1lYXN1cmVtZW50IGlzIGJhc2VkIG9uIHRoZSBkb3du
+bG9hZCBvZiB0aGF0IHBhZ2UuA</bytes>
 						</object>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
@@ -174,7 +177,7 @@ cyBiYXNlZCBvbiB0aGUgZG93bmxvYWQgb2YgdGhhdCBwYWdlLg</bytes>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="483052203"/>
-							<reference ref="412891741"/>
+							<reference ref="638469606"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -196,7 +199,7 @@ cyBiYXNlZCBvbiB0aGUgZG93bmxvYWQgb2YgdGhhdCBwYWdlLg</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="412891741"/>
+						<reference key="object" ref="638469606"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
