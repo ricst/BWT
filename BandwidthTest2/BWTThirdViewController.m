@@ -239,14 +239,17 @@
 // Reset URLs to original App defaults, clearing out any user set defaults
 - (IBAction)resetDefaultsButton:(id)sender {
     
-    // **** [NSUserDefaults resetStandardUserDefaults];
-    // [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:INITIAL_WEBSITE, @"INITIAL_WEBSITE", URL1, @"URL1", URL2, @"URL2", URL3, @"URL3", nil]];
     self.URL1Text.text = URL1;
     [[NSUserDefaults standardUserDefaults] setObject:URL1 forKey:@"URL1"];
     self.URL2Text.text = URL2;
     [[NSUserDefaults standardUserDefaults] setObject:URL2 forKey:@"URL2"];
     self.URL3Text.text = URL3;
     [[NSUserDefaults standardUserDefaults] setObject:URL3 forKey:@"URL3"];
+    
+    MyLog(@"NSUserDefaults URLs now:");
+    for (NSString *url in @[@"URL1", @"URL2", @"URL3"]) {
+        MyLog(@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:url]);
+    }
 }
 
 // Actions when user finishes entering text
@@ -267,6 +270,7 @@
     
     NSString *urlString = self.URL3Text.text;
     [[NSUserDefaults standardUserDefaults] setObject:urlString forKey:@"URL3"];
+    MyLog(@"URL3 text stored in NSUserDefaults as: %@", urlString);
 }
 
 // Prepend "http://" if string does not start with "http"
