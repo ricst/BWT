@@ -246,10 +246,10 @@
     self.URL3Text.text = URL3;
     [[NSUserDefaults standardUserDefaults] setObject:URL3 forKey:@"URL3"];
     
-    MyLog(@"NSUserDefaults URLs now:");
+    /* MyLog(@"NSUserDefaults URLs now:");
     for (NSString *url in @[@"URL1", @"URL2", @"URL3"]) {
         MyLog(@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:url]);
-    }
+    } */
 }
 
 // Actions when user finishes entering text

@@ -25,8 +25,11 @@
 		186C582415F6F6B500C52AA6 /* BWTThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C582215F6F6B500C52AA6 /* BWTThirdViewController.xib */; };
 		186C584215FBD3C800C52AA6 /* OldCode in Resources */ = {isa = PBXBuildFile; fileRef = 186C584115FBD3C800C52AA6 /* OldCode */; };
 		186C584515FBD48A00C52AA6 /* MyDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 186C584415FBD48A00C52AA6 /* MyDownloader.m */; };
+		186FAB0A160E72BC003E4C6C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186FAB09160E72BC003E4C6C /* Default-568h@2x.png */; };
 		189F05F11606566A00E3ACB0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189F05F01606566A00E3ACB0 /* Default@2x.png */; };
 		189F05F31606568A00E3ACB0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 189F05F21606568A00E3ACB0 /* Default.png */; };
+		189F05F51607D98600E3ACB0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 189F05F41607D98600E3ACB0 /* Icon.png */; };
+		189F05F71607D98C00E3ACB0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189F05F61607D98C00E3ACB0 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,9 +59,13 @@
 		186C584115FBD3C800C52AA6 /* OldCode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OldCode; sourceTree = "<group>"; };
 		186C584315FBD48A00C52AA6 /* MyDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDownloader.h; sourceTree = "<group>"; };
 		186C584415FBD48A00C52AA6 /* MyDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDownloader.m; sourceTree = "<group>"; };
+		186FAB09160E72BC003E4C6C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		187C0740161E4DF000263B15 /* BandwidthTest2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BandwidthTest2.xcodeproj; sourceTree = SOURCE_ROOT; };
 		189F05EE1603EB0400E3ACB0 /* URLDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLDefaults.h; sourceTree = "<group>"; };
-		189F05F01606566A00E3ACB0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		189F05F21606568A00E3ACB0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		189F05F01606566A00E3ACB0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		189F05F21606568A00E3ACB0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		189F05F41607D98600E3ACB0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		189F05F61607D98C00E3ACB0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +85,6 @@
 		186C57DD15F69CF700C52AA6 = {
 			isa = PBXGroup;
 			children = (
-				189F05F21606568A00E3ACB0 /* Default.png */,
-				189F05F01606566A00E3ACB0 /* Default@2x.png */,
 				186C57F215F69CF700C52AA6 /* BandwidthTest2 */,
 				186C57EB15F69CF700C52AA6 /* Frameworks */,
 				186C57E915F69CF700C52AA6 /* Products */,
@@ -111,6 +116,7 @@
 				186C57FC15F69CF700C52AA6 /* BWTAppDelegate.m */,
 				189F05EE1603EB0400E3ACB0 /* URLDefaults.h */,
 				186C57FE15F69CF700C52AA6 /* BWTFirstViewController.h */,
+				187C0740161E4DF000263B15 /* BandwidthTest2.xcodeproj */,
 				186C57FF15F69CF700C52AA6 /* BWTFirstViewController.m */,
 				186C580515F69CF700C52AA6 /* BWTSecondViewController.h */,
 				186C580615F69CF700C52AA6 /* BWTSecondViewController.m */,
@@ -142,12 +148,22 @@
 		186C581715F69D3600C52AA6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				186FAB09160E72BC003E4C6C /* Default-568h@2x.png */,
+				189F05F61607D98C00E3ACB0 /* Icon@2x.png */,
+				189F05F41607D98600E3ACB0 /* Icon.png */,
+				189F05F21606568A00E3ACB0 /* Default.png */,
+				189F05F01606566A00E3ACB0 /* Default@2x.png */,
 				186C580115F69CF700C52AA6 /* first.png */,
 				186C580315F69CF700C52AA6 /* first@2x.png */,
 				186C580815F69CF700C52AA6 /* second.png */,
 				186C580A15F69CF700C52AA6 /* second@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		187C0741161E4DF000263B15 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +206,12 @@
 			mainGroup = 186C57DD15F69CF700C52AA6;
 			productRefGroup = 186C57E915F69CF700C52AA6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 187C0741161E4DF000263B15 /* Products */;
+					ProjectRef = 187C0740161E4DF000263B15 /* BandwidthTest2.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				186C57E715F69CF700C52AA6 /* BWT */,
@@ -213,6 +235,9 @@
 				186C584215FBD3C800C52AA6 /* OldCode in Resources */,
 				189F05F11606566A00E3ACB0 /* Default@2x.png in Resources */,
 				189F05F31606568A00E3ACB0 /* Default.png in Resources */,
+				189F05F51607D98600E3ACB0 /* Icon.png in Resources */,
+				189F05F71607D98C00E3ACB0 /* Icon@2x.png in Resources */,
+				186FAB0A160E72BC003E4C6C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +344,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BandwidthTest2/BandwidthTest2-Prefix.pch";
 				INFOPLIST_FILE = "BandwidthTest2/BandwidthTest2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -330,6 +356,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BandwidthTest2/BandwidthTest2-Prefix.pch";
 				INFOPLIST_FILE = "BandwidthTest2/BandwidthTest2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
