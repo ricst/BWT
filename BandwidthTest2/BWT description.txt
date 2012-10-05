@@ -1,0 +1,14 @@
+The BWT (BandWidth Test) App provides a simple approach to real world 
+bandwidth measurement.  Users may select up to three different URLs and
+then see the download bandwidth for each of them.
+
+BWT provides one view with a "mini browser" that allows navigation
+to a desired page, which may then be tested.  An alternate view allows
+users to select 1, 2 or 3 URLs for simultaneous bandwidth testing.
+
+BWT is designed for anyone who wants to determine their current bandwidth
+to sites that they connect to.  Sites may be changed as often
+as desired.  
+
+It's ideal for system, network and 
+web site administrators who need to monitor bandwidth to their systems.

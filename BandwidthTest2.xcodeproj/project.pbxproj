@@ -26,6 +26,7 @@
 		186C584215FBD3C800C52AA6 /* OldCode in Resources */ = {isa = PBXBuildFile; fileRef = 186C584115FBD3C800C52AA6 /* OldCode */; };
 		186C584515FBD48A00C52AA6 /* MyDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 186C584415FBD48A00C52AA6 /* MyDownloader.m */; };
 		186FAB0A160E72BC003E4C6C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186FAB09160E72BC003E4C6C /* Default-568h@2x.png */; };
+		187C0745161F77A900263B15 /* BWT description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 187C0744161F77A900263B15 /* BWT description.txt */; };
 		189F05F11606566A00E3ACB0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189F05F01606566A00E3ACB0 /* Default@2x.png */; };
 		189F05F31606568A00E3ACB0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 189F05F21606568A00E3ACB0 /* Default.png */; };
 		189F05F51607D98600E3ACB0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 189F05F41607D98600E3ACB0 /* Icon.png */; };
@@ -61,6 +62,7 @@
 		186C584415FBD48A00C52AA6 /* MyDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDownloader.m; sourceTree = "<group>"; };
 		186FAB09160E72BC003E4C6C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		187C0740161E4DF000263B15 /* BandwidthTest2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BandwidthTest2.xcodeproj; sourceTree = SOURCE_ROOT; };
+		187C0744161F77A900263B15 /* BWT description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "BWT description.txt"; sourceTree = "<group>"; };
 		189F05EE1603EB0400E3ACB0 /* URLDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLDefaults.h; sourceTree = "<group>"; };
 		189F05F01606566A00E3ACB0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		189F05F21606568A00E3ACB0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				186C57F515F69CF700C52AA6 /* InfoPlist.strings */,
 				186C57F815F69CF700C52AA6 /* main.m */,
 				186C57FA15F69CF700C52AA6 /* BandwidthTest2-Prefix.pch */,
+				187C0744161F77A900263B15 /* BWT description.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				189F05F51607D98600E3ACB0 /* Icon.png in Resources */,
 				189F05F71607D98C00E3ACB0 /* Icon@2x.png in Resources */,
 				186FAB0A160E72BC003E4C6C /* Default-568h@2x.png in Resources */,
+				187C0745161F77A900263B15 /* BWT description.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
